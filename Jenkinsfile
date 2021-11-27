@@ -44,7 +44,6 @@ pipeline {
               input "Review the Terraform plan above"
               sh "terraform apply --auto-approve"
               echo "====++++ Deploy to Dev Successful ++++===="
-              sh "cp ./kubeconfig_rahulp-test-cluster ~/.kube/config"
             }
         }
 
