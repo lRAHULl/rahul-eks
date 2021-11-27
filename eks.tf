@@ -8,8 +8,8 @@ module "eks" {
   vpc_id          = data.aws_vpc.vpc.id
   subnets         = data.aws_subnet_ids.private.ids
 
-  write_kubeconfig       = true
-  kubeconfig_output_path = "~/kubeconfig.yaml"
+  write_kubeconfig = true
+  kubeconfig_name  = "kubeconfig"
 
   worker_groups = [
     {

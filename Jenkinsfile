@@ -44,7 +44,7 @@ pipeline {
               input "Review the Terraform plan above"
               sh "terraform apply --auto-approve"
               echo "====++++ Deploy to Dev Successful ++++===="
-              sh "cd ~ && pwd && ls"
+              sh "pwd && ls"
             }
         }
 
