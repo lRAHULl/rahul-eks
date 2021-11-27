@@ -9,7 +9,7 @@ module "eks" {
   subnets         = data.aws_subnet_ids.private.ids
 
   write_kubeconfig       = true
-  kubeconfig_output_path = "/var/kubernetes/kubeconfig.yaml"
+  kubeconfig_output_path = "~/kubeconfig.yaml"
 
   worker_groups = [
     {
