@@ -61,7 +61,7 @@ pipeline {
             }
         }
 
-        stage('Stage') {
+        stage('Prod') {
             steps {
               echo "====++++ Deploy to Prod ++++===="
               echo "====++++ Deploy to Prod Skipped ++++===="
