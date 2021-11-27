@@ -42,7 +42,7 @@ pipeline {
               echo "====++++ Deploy to Dev ++++===="
               sh "terraform plan"
               input "Review the Terraform plan above"
-              // sh "terraform apply --auto-approve"
+              sh "terraform apply --auto-approve"
               echo "====++++ Deploy to Dev Successful ++++===="
             }
         }
