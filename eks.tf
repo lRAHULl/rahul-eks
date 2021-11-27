@@ -8,8 +8,8 @@ module "eks" {
   vpc_id          = data.aws_vpc.vpc.id
   subnets         = data.aws_subnet_ids.private.ids
 
-  write_kubeconfig = true
-  kubeconfig_name  = "kubeconfig"
+  write_kubeconfig           = true
+  kubeconfig_file_permission = "644"
 
   worker_groups = [
     {
