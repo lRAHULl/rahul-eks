@@ -8,6 +8,9 @@ module "eks" {
   vpc_id          = data.aws_vpc.vpc.id
   subnets         = data.aws_subnet_ids.private.ids
 
+  write_kubeconfig       = true
+  kubeconfig_output_path = "/var/kubernetes/kubeconfig.yaml"
+
   worker_groups = [
     {
       instance_type = "t2.large"
@@ -20,8 +23,4 @@ module "eks" {
     purpose      = "test-cluster"
     businessunit = "DevOps"
   }
-}
-
-output "kubeconfig" {
-  value = module.eks.kubeconfig
 }
