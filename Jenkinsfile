@@ -41,8 +41,10 @@ pipeline {
             steps {
               echo "====++++ Deploy to Dev ++++===="
               sh "terraform plan"
+              sh "terraform plan -destroy"
               input "Review the Terraform plan above"
-              sh "terraform apply --auto-approve"
+              // sh "terraform apply --auto-approve"
+              sh "terraform destroy --auto-approve"
               echo "====++++ Deploy to Dev Successful ++++===="
             }
         }
